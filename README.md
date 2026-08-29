@@ -36,7 +36,7 @@ Only notebooks that actually computed a naive baseline are included here. Number
 | Notebook | Naive Baseline | Model Prediction |
 |---|---|---|
 | **Baltimore Water Usage** (walk-forward) | Persistence: 20.89 | Walk-forward MAE: 20.32 |
-| **Champagne Monthly Sales** (walk-forward) | Persistence: 1737.37 | ⚠️ Reported "RMSE" 4472.54 is not valid — the walk-forward loop appends a placeholder `[0]` instead of the actual prediction (`pred[0]`), so this figure doesn't reflect real model performance. Worth fixing before trusting this notebook's result. |
+| **Champagne Monthly Sales** (walk-forward) | Persistence: 1737.37 | Walk-Forward MASE: 24.376721409116286 |
 | **Demand Forecasting** (Prophet + XGBoost) | Persistence: 116.32 | Prophet only — Train: 86.29, Test: 86.07 <br> Final (+ XGBoost on residuals) — Train: 7.31, Test: 7.59 |
 | **Favorita Store Sales** (XGBoost + LSTM) | Persistence (7-day rolling mean): 257.35 | XGBoost — Train: 185.33, Val: 237.87, Test: 227.13 <br> LSTM — Train: 62.57, Val: 258.25, Test: 235.32 <br> Weighted hybrid (0.6·XGB + 0.4·LSTM) — Train: 221.37, Val: 239.42, Test: 225.24 |
  
